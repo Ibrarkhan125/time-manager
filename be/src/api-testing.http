@@ -1,0 +1,95 @@
+@URL=http://localhost:3005
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NDJlYzhkZTU3MWEyN2Q3YmRjMjg4NyIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJpYXQiOjE3NDkyMTY0NzMsImV4cCI6MTc0OTgyMTI3M30.5UyYTTeXAltzyGjsX_Px8BbOPHO4GWqvOe7aHxevbIw
+@taskId = 12345
+
+GET {{URL}}
+Authorization: Bearer {{token}}
+
+### Register a new user
+POST {{URL}}/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "testuser@example.com",
+  "password": "testpassword"
+}
+
+### Login as user
+POST {{URL}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "password": "testpassword"
+}
+
+### Get user profile
+GET {{URL}}/api/user/profile
+Authorization: Bearer {{token}}
+
+### Update user profile
+PUT {{URL}}/api/user/profile
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Updated User",
+  "email": "testuser@example.com"
+}
+
+### Create a new task
+POST {{URL}}/api/tasks
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Read a book",
+  "priority": "High",
+  "category": "Study",
+  "description": "Read 20 pages of a book.",
+  "notes": "<p>Start with chapter 1</p>",
+  "dueDate": "2025-06-07T18:00:00.000Z"
+}
+
+### Get all tasks
+GET {{URL}}/api/tasks
+Authorization: Bearer {{token}}
+
+### Get a single task
+GET {{URL}}/api/tasks/{{taskId}}
+Authorization: Bearer {{token}}
+
+### Update a task
+PUT {{URL}}/api/tasks/{{taskId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Read a book (updated)",
+  "priority": "Medium",
+  "completed": true
+}
+
+### Delete a task
+DELETE {{URL}}/api/tasks/{{taskId}}
+Authorization: Bearer {{token}}
+
+### Log a Pomodoro session
+POST {{URL}}/api/tasks/{{taskId}}/pomodoro
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "startTime": "2025-06-06T10:00:00.000Z",
+  "endTime": "2025-06-06T10:25:00.000Z",
+  "completed": true
+}
+
+### Get daily summary
+GET {{URL}}/api/tasks/summary?range=daily
+Authorization: Bearer {{token}}
+
+### Get weekly summary
+GET {{URL}}/api/tasks/summary?range=weekly
+Authorization: Bearer {{token}}
