@@ -29,7 +29,6 @@ A full-featured MERN stack (MongoDB, Express, React, Node.js) time management ap
 - **TailwindCSS**: Utility-first CSS for rapid, responsive design.
 - **React Router v7**: Routing and protected routes.
 - **Axios**: HTTP client for API requests.
-- **React-Quill**: Rich text editor for task notes.
 - **Recharts**: Data visualization for progress charts.
 
 ---
@@ -46,7 +45,6 @@ A full-featured MERN stack (MongoDB, Express, React, Node.js) time management ap
 - Full CRUD for tasks (create, read, update, delete)
 - Task prioritization (High, Medium, Low)
 - Task categorization (Study, Personal, Work, Other)
-- Rich text notes for each task (React-Quill)
 - Due date and completion status
 - Filtering by priority and category
 - Responsive Ant Design cards and modals for task input
@@ -77,7 +75,7 @@ A full-featured MERN stack (MongoDB, Express, React, Node.js) time management ap
 
 ### Dashboard
 - Task list (CRUD, filter, edit, delete)
-- Task creation modal (AntD + React-Quill)
+- Task creation modal (AntD)
 - Filtering by priority/category
 - Calendar view (AntD Calendar)
 - Daily/weekly summary cards and charts (Recharts)
@@ -120,7 +118,6 @@ A full-featured MERN stack (MongoDB, Express, React, Node.js) time management ap
 - **TailwindCSS**: Fast, responsive, and maintainable styling.
 - **Zustand**: Simple, scalable state management for auth/tasks.
 - **Recharts**: Easy, beautiful data visualization.
-- **React-Quill**: Rich text editing for enhanced task notes.
 - **React Router**: Clean navigation and route protection.
 - **Axios**: Reliable, promise-based HTTP requests.
 - **Browser Notification API**: Real-time reminders and productivity nudges.
