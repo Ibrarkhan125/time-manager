@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import { message } from "antd";
 
 function App() {
-  axios.defaults.baseURL = "http://localhost:3005";
+  axios.defaults.baseURL = "https://aware-longhorn-radically.ngrok-free.app";
 
   useEffect(() => {
     message.warning("Hello", 2);
