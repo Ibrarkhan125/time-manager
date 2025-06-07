@@ -211,7 +211,7 @@ const Dashboard: React.FC = () => {
                     outerRadius={60}
                     label
                   >
-                    {summaryData(summary.daily).map((entry, idx) => (
+                    {summaryData(summary.daily).map((_, idx) => (
                       <Cell
                         key={`cell-daily-${idx}`}
                         fill={COLORS[idx % COLORS.length]}
@@ -248,7 +248,7 @@ const Dashboard: React.FC = () => {
                     outerRadius={60}
                     label
                   >
-                    {summaryData(summary.weekly).map((entry, idx) => (
+                    {summaryData(summary.weekly).map((_, idx) => (
                       <Cell
                         key={`cell-weekly-${idx}`}
                         fill={COLORS[idx % COLORS.length]}
